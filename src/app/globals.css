@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-@import "tailwindcss";
-
 /* Ensure Times New Roman is used throughout the site */
 body {
   font-family: 'Times New Roman', Times, serif;
