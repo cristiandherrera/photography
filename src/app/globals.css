@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@import "tailwindcss";
+
+/* Ensure Times New Roman is used throughout the site */
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+/* Custom hover effect for images */
+.image-hover-effect {
+  transition: transform 0.5s ease;
+}
+
+.image-hover-effect:hover {
+  transform: scale(1.03);
+}
+
+/* Prevent image selection */
+img {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
