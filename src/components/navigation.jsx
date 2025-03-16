@@ -62,6 +62,24 @@ export default function Navigation({ name = "JONATHAN SMITH" }) {
               href="/contact" 
               className={`px-2 py-1 border-b-2 border-transparent hover:border-gray-200 transition-colors`}
             >
+              My Story
+            </Link>
+            <Link 
+              href="" 
+              className={`px-2 py-1 border-b-2 border-transparent hover:border-gray-200 transition-colors`}
+            >
+              Instagram
+            </Link>
+            <Link 
+              href="https://buymeacoffee.com/" 
+              className={`px-2 py-1 border-b-2 border-transparent hover:border-gray-200 transition-colors`}
+            >
+              Buy me a Coffee
+            </Link>
+            <Link 
+              href="/contact" 
+              className={`px-2 py-1 border-b-2 border-transparent hover:border-gray-200 transition-colors`}
+            >
               Contact
             </Link>
           </div>
@@ -106,6 +124,7 @@ export default function Navigation({ name = "JONATHAN SMITH" }) {
           >
             Home
           </Link>
+          
           <Link 
             href="/gallery" 
             className="hover:border-b-2 border-transparent hover:border-gray-400 px-3 py-2"

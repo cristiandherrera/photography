@@ -6,6 +6,7 @@ import Navigation from '../components/navigation';
 import Footer from '../components/footer';
 import Link from 'next/link';
 import ImageModal from '../components/ImageModal';
+import MagazineSpread from '../components/MagazineSpread';
 
 export default function HomePage() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -29,38 +30,8 @@ export default function HomePage() {
     <main className="bg-white min-h-screen flex flex-col">
       <Navigation name="JONATHAN SMITH" />
       
-      {/* Hero Section with Magazine Feature */}
-      <div className="min-h-screen flex items-center px-4">
-        <div className="max-w-7xl mx-auto w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
-            {/* Large magazine image that takes 3/5 of the width */}
-            <div className="order-1 lg:col-span-3 relative">
-              <div className="aspect-[3/4] shadow-2xl relative z-10 transform transition-transform duration-500 hover:scale-[1.02] mx-auto">
-                <img 
-                  src="/singer.jpg" 
-                  alt="Singer portrait" 
-                  className="w-full h-full object-cover"
-                  loading="eager"
-                />
-              </div>
-              <div className="absolute -bottom-6 -right-6 bg-black text-white px-6 py-4 z-20 shadow-xl">
-                <p className="font-serif uppercase tracking-widest text-xs mb-1">FEATURED IN</p>
-                <p className="font-serif text-xl">National Geographic</p>
-              </div>
-            </div>
-            
-            {/* Text on the right side taking 2/5 of width */}
-            <div className="order-2 lg:col-span-2">
-              <h1 className="text-5xl md:text-6xl xl:text-7xl font-serif mb-8 leading-tight">
-                Lens & Light
-              </h1>
-              <p className="font-serif text-xl md:text-2xl mb-10 max-w-lg text-gray-700">
-                Award-winning photography that captures the essence of our world
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* Magazine Spread Component */}
+      <MagazineSpread />
       
       {/* Portfolio Preview Grid - Large Gallery */}
       <div className="py-16 bg-gray-50">
@@ -101,6 +72,7 @@ export default function HomePage() {
             activeTab === 'portrait' ? 'hidden' : 'block'
           }`}>
             {/* 3:2 Images */}
+            {/* 1st row*/}
             <div className="aspect-[3/2] overflow-hidden">
               <img 
                 src="/images/images_3_2/public-center-market.jpg" 
@@ -131,6 +103,7 @@ export default function HomePage() {
               />
             </div>
             
+            {/* 2nd row*/}
             <div className="aspect-[3/2] overflow-hidden">
               <img 
                 src="/images/images_3_2/stever.jpg" 
@@ -153,14 +126,15 @@ export default function HomePage() {
             
             <div className="aspect-[3/2] overflow-hidden">
               <img 
-                src="/images/images_3_2/Snapinst.app_429902249_716149860663856_7262378799388044302_n_1080.jpg" 
+                src="/images/images_3_2/icemountain.jpg" 
                 alt="Photography" 
                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-105 cursor-pointer"
-                onClick={() => openModal('/images/images_3_2/Snapinst.app_429902249_716149860663856_7262378799388044302_n_1080.jpg')}
+                onClick={() => openModal('/images/images_3_2/icemountain.jpg')}
                 loading="lazy"
               />
             </div>
             
+            {/* 3rd row*/}
             <div className="aspect-[3/2] overflow-hidden">
               <img 
                 src="/images/images_3_2/Snapinst.app_426156712_1325117204852802_6119519004358542939_n_1080.jpg" 
@@ -191,12 +165,13 @@ export default function HomePage() {
               />
             </div>
             
+            {/* 4th row*/}
             <div className="aspect-[3/2] overflow-hidden">
               <img 
-                src="/images/images_3_2/Snapinst.app_433435077_927417172203376_6523494147813919139_n_1080.jpg" 
+                src="/images/images_3_2/pianoman.jpg" 
                 alt="Photography" 
                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-105 cursor-pointer"
-                onClick={() => openModal('/images/images_3_2/Snapinst.app_433435077_927417172203376_6523494147813919139_n_1080.jpg')}
+                onClick={() => openModal('/images/images_3_2/pianoman.jpg')}
                 loading="lazy"
               />
             </div>
@@ -226,8 +201,28 @@ export default function HomePage() {
             activeTab === 'landscape' ? 'hidden' : 'block'
           }`}>
 
-            {/* 4:5 Images */}
+            {/* 4:5 Images -----------------------------------------------------------------------------------*/}
             {/* 1st row*/}
+            <div className="aspect-[4/5] overflow-hidden">
+              <img 
+                src="/images/images_4_5/cowboy.jpg" 
+                alt="Scary Bird" 
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105 cursor-pointer"
+                onClick={() => openModal('/images/images_4_5/cowboy.jpg')}
+                loading="lazy"
+              />
+            </div>
+
+            <div className="aspect-[4/5] overflow-hidden">
+              <img 
+                src="/images/images_4_5/frootloops.jpg" 
+                alt="Scary Bird" 
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105 cursor-pointer"
+                onClick={() => openModal('/images/images_4_5/frootloops.jpg')}
+                loading="lazy"
+              />
+            </div>
+            
             <div className="aspect-[4/5] overflow-hidden">
               <img 
                 src="/images/images_4_5/scary-building.jpg" 
@@ -237,27 +232,6 @@ export default function HomePage() {
                 loading="lazy"
               />
             </div>
-            
-            <div className="aspect-[4/5] overflow-hidden">
-              <img 
-                src="/images/images_4_5/scary-bird.jpg" 
-                alt="Scary Bird" 
-                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105 cursor-pointer"
-                onClick={() => openModal('/images/images_4_5/scary-bird.jpg')}
-                loading="lazy"
-              />
-            </div>
-            
-            <div className="aspect-[4/5] overflow-hidden">
-              <img 
-                src="/images/images_4_5/piano-layered.jpg" 
-                alt="Bird and Bug" 
-                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105 cursor-pointer"
-                onClick={() => openModal('/images/images_4_5/piano-layered.jpg')}
-                loading="lazy"
-              />
-            </div>
-            
             <div className="aspect-[4/5] overflow-hidden">
               <img 
                 src="/images/images_4_5/orange-bug.jpg" 
@@ -271,29 +245,29 @@ export default function HomePage() {
             {/* 2nd row*/}     
             <div className="aspect-[4/5] overflow-hidden">
               <img 
-                src="/images/images_4_5/Snapinst.app_467726408_590988180136321_4562799817050919405_n_1080.jpg" 
+                src="/images/images_4_5/elvis.jpg" 
                 alt="Portrait Photography" 
                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-105 cursor-pointer"
-                onClick={() => openModal('/images/images_4_5/Snapinst.app_467726408_590988180136321_4562799817050919405_n_1080.jpg')}
+                onClick={() => openModal('/images/images_4_5/elvis.jpg')}
                 loading="lazy"
               />
             </div>       
             <div className="aspect-[4/5] overflow-hidden">
               <img 
-                src="/images/images_4_5/mustache-guitar.jpg" 
+                src="/images/images_4_5/offset-starlounge.jpg" 
                 alt="Portrait Photography" 
                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-105 cursor-pointer"
-                onClick={() => openModal('/images/images_4_5/mustache-guitar.jpg')}
+                onClick={() => openModal('/images/images_4_5/offset-starlounge.jpg')}
                 loading="lazy"
               />
             </div>
             
             <div className="aspect-[4/5] overflow-hidden">
               <img 
-                src="/images/images_4_5/frootloops.jpg" 
+                src="/images/images_4_5/gir-close-up.jpg" 
                 alt="Portrait Photography" 
                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-105 cursor-pointer"
-                onClick={() => openModal('/images/images_4_5/frootloops.jpg')}
+                onClick={() => openModal('/images/images_4_5/gir-close-up.jpg')}
                 loading="lazy"
               />
             </div>
@@ -311,20 +285,20 @@ export default function HomePage() {
             {/* 3rd row*/}
             <div className="aspect-[4/5] overflow-hidden">
               <img 
-                src="/images/images_4_5/cowboy.jpg" 
+                src="/images/images_4_5/bird-bug.jpg" 
                 alt="Portrait Photography" 
                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-105 cursor-pointer"
-                onClick={() => openModal('/images/images_4_5/cowboy.jpg')}
+                onClick={() => openModal('/images/images_4_5/bird-bug.jpg')}
                 loading="lazy"
               />
             </div>
             
             <div className="aspect-[4/5] overflow-hidden">
               <img 
-                src="/images/images_4_5/purple-girl.jpg" 
+                src="/images/images_4_5/black-comic.jpg" 
                 alt="Portrait Photography" 
                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-105 cursor-pointer"
-                onClick={() => openModal('/images/images_4_5/purple-girl.jpg')}
+                onClick={() => openModal('/images/images_4_5/black-comic.jpg')}
                 loading="lazy"
               />
             </div>
@@ -390,6 +364,44 @@ export default function HomePage() {
         </div>
       </div>
       
+      {/* About Me Section */}
+      <div className="py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <span className="text-sm font-serif uppercase tracking-widest mb-4 inline-block">About Me</span>
+            <h2 className="text-4xl font-serif mb-8">
+              The Person Behind the Lens
+            </h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="aspect-square md:aspect-auto overflow-hidden">
+              <img 
+                src="/justin.jpg" 
+                alt="Jonathan Smith - Photographer" 
+                className="w-full h-full object-cover rounded-lg shadow-lg"
+                loading="lazy"
+              />
+            </div>
+            
+            <div className="flex flex-col justify-center">
+              <p className="font-serif text-lg mb-6 text-gray-700">
+                I'm Justin Herrera, a photographer with a passion for capturing the extraordinary in everyday moments. With over a decade of experience behind the lens, I've developed a style that blends technical precision with artistic vision.
+              </p>
+              <p className="font-serif text-lg mb-8 text-gray-700">
+                Whether I'm shooting landscapes, portraits, or street photography, I strive to tell authentic stories through my images. My work has been featured in various publications and exhibitions across the country.
+              </p>
+              <Link 
+                href="/about" 
+                className="self-start inline-block px-10 py-3 border border-black font-serif text-lg hover:bg-black hover:text-white transition-colors duration-300"
+              >
+                Learn More About Me
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+      
       {/* Instagram Teaser */}
       <div className="py-24 px-4">
         <div className="max-w-7xl mx-auto text-center">
@@ -406,7 +418,7 @@ export default function HomePage() {
           <div className="grid grid-cols-2 md:grid-cols-6 gap-1">
             <div className="aspect-square overflow-hidden">
               <img 
-                src="/images/Snapinst.app_472895280_1302157310818159_7778809803689353633_n_1080.jpg" 
+                src="/images/bird-bug.jpg" 
                 alt="Instagram post" 
                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 loading="lazy"
@@ -422,7 +434,7 @@ export default function HomePage() {
             </div>
             <div className="aspect-square overflow-hidden">
               <img 
-                src="/images/Snapinst.app_475060822_18485238166028778_7056324810208827869_n_1080.jpg" 
+                src="/images/cave.jpg" 
                 alt="Instagram post" 
                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 loading="lazy"
@@ -430,7 +442,7 @@ export default function HomePage() {
             </div>
             <div className="aspect-square overflow-hidden">
               <img 
-                src="/images/Snapinst.app_432333543_785297003443665_4518703344032415053_n_1080.jpg" 
+                src="/images/images_3_2/skateboard.jpg" 
                 alt="Instagram post" 
                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 loading="lazy"
@@ -464,6 +476,40 @@ export default function HomePage() {
                 <path d="M7 17l9.2-9.2M17 17V7H7"/>
               </svg>
             </Link>
+          </div>
+        </div>
+      </div>
+      
+      {/* Support My Work Section */}
+      <div className="py-24 bg-white border-t border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 text-center">
+          <span className="text-sm font-serif uppercase tracking-widest mb-4 inline-block">Support My Work</span>
+          <h2 className="text-4xl font-serif mb-8">
+            Appreciate What You See?
+          </h2>
+          
+          <div className="max-w-2xl mx-auto">
+            <p className="font-serif text-lg mb-10 text-gray-700">
+              If my photography has inspired you or brought you joy, consider supporting my creative journey. Your contribution helps fund new equipment, travel to capture unique moments, and time to create more of the work you enjoy.
+            </p>
+            
+            <a 
+              href="https://www.buymeacoffee.com/jonathansmith" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="inline-flex items-center px-10 py-3 border-2 border-black bg-white font-serif text-lg hover:bg-black hover:text-white transition-colors duration-300 group"
+            >
+              <span className="mr-3 bg-yellow-400 p-1 rounded-full group-hover:bg-yellow-300 transition-colors duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                  <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                  <line x1="6" y1="1" x2="6" y2="4"></line>
+                  <line x1="10" y1="1" x2="10" y2="4"></line>
+                  <line x1="14" y1="1" x2="14" y2="4"></line>
+                </svg>
+              </span>
+              Buy Me a Coffee
+            </a>
           </div>
         </div>
       </div>
