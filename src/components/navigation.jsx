@@ -70,12 +70,12 @@ export default function Navigation({ name = "JONATHAN SMITH" }) {
             >
               Instagram
             </Link>
-            <Link 
+            {/* <Link 
               href="https://buymeacoffee.com/" 
               className={`px-1 py-1 border-b-2 border-transparent hover:border-gray-200 transition-colors`}
             >
               Buy me a Coffee
-            </Link>
+            </Link> */}
             <Link 
               href="/contact" 
               className={`ml-2 px-3 py-1.5 border-2 border-black text-black hover:bg-black hover:text-white rounded-md transition-colors duration-300`}
