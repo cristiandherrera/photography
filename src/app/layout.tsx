@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Foothill Photography",
+  title: "Justin Herrera | Foothill Photography",
   description: "Justin Herrera's Photography Portfolio (Ventura, CA)",
 };
 

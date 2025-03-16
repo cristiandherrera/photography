@@ -400,7 +400,7 @@ export default function HomePage() {
           <div className="flex items-center justify-center mb-4">
             <div className="flex-grow h-px bg-gray-200"></div>
             <div className="mx-6">
-              <div className="font-serif text-gray-400 text-sm tracking-widest px-4">STORIES</div>
+              <div className="font-serif text-gray-400 text-sm tracking-widest px-4">ABOUT ME</div>
             </div>
             <div className="flex-grow h-px bg-gray-200"></div>
           </div>
@@ -439,7 +439,7 @@ export default function HomePage() {
       </div>
       
       {/* Instagram Teaser */}
-      <div className="pb-24 px-4 bg-gray-100">
+      <div className="pb-24 pt-12 px-4 bg-gray-100">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-16">
           <div className="max-w-4xl mx-auto px-4">
@@ -525,7 +525,7 @@ export default function HomePage() {
       </div>
       
       {/* Support My Work Section */}
-      <div className=" pb-24 bg-gray-100">
+      <div className=" pb-24 pt-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto px-4">
           <div className="flex items-center justify-center mb-4">

@@ -31,7 +31,7 @@ const MagazineSpread = () => {
   }, []);
 
   return (
-    <div className="h-auto flex items-start px-4 md:px-8 py-12">
+    <div className="h-auto flex items-start px-4 md:px-8 pt-12 py-12">
       <div className="max-w-screen-2xl mx-auto w-full">
         {/* Magazine Container with optimized 3D perspective */}
         <div className="relative" id="magazine-spread">
@@ -119,10 +119,16 @@ const MagazineSpread = () => {
         </div>
         
         {/* Latest Feature */}
-        <div className="text-center mt-8 mb-8">
+        <div className="text-center mt-12 mb-8">
           <h3 className='font-serif tracking-widest text-sm'>Welcome to my latest feature in The VC Reporter, a publication that covers the latest news and trends in the venture capital industry</h3>
           <h3 className="font-serif tracking-widest text-sm">I was featured in this issue for my work on the cover and inside pages.</h3>
-          <h3 className="font-serif tracking-widest text-sm">Creative Direction, Photography, and Design <strong>by Justin Herrera</strong>.</h3>
+          <h3 className="font-serif tracking-widest text-sm">
+            <span className="text-[#D22B2B]">Creative Direction, Photography, and Design</span>
+            {/* <span className="text-[#DC143C]">Creative Direction, Photography, and Design</span> */}
+            {/* <span className="text-[#CD1818]">Creative Direction, Photography, and Design</span> */}
+
+            <strong> by Justin Herrera</strong>.
+          </h3>
         </div>
       </div>
     </div>
