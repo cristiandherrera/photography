@@ -3,8 +3,11 @@
 /* Ensure Times New Roman is used throughout the site */
 body {
   font-family: 'Times New Roman', Times, serif;
-  background-color: #FFFFFF;
   color: #000000;
+}
+
+main {
+  background-color: #FFFFFF;
 }
 
 /* Custom hover effect for images */

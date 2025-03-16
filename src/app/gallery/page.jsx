@@ -1,9 +1,9 @@
 // File: src/app/gallery/page.jsx
 "use client";
 
-import Gallery from '../../../components/gallery';
-import Navigation from '../../../components/navigation';
-import Footer from '../../../components/footer';
+import Gallery from '../../components/gallery';
+import Navigation from '../../components/navigation';
+import Footer from '../../components/footer';
 import Link from 'next/link';
 
 export default function GalleryPage() {

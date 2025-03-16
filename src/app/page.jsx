@@ -34,16 +34,24 @@ export default function HomePage() {
       <MagazineSpread />
       
       {/* Portfolio Preview Grid - Large Gallery */}
-      <div className="py-16 bg-gray-50">
+      <div className="py-8 bg-gray-50">
         <div className="max-w-[90rem] mx-auto px-2">
-          <div className="text-center mb-12">
-            <span className="text-sm font-serif uppercase tracking-widest mb-4 inline-block">Portfolio Selections</span>
-            <h2 className="text-4xl font-serif mb-8">
+          <div className="text-center mb-8">
+          <div className="max-w-4xl mx-auto px-4">
+          <div className="flex items-center justify-center mb-4">
+            <div className="flex-grow h-px bg-gray-200"></div>
+            <div className="mx-6">
+              <div className="font-serif text-gray-400 text-sm tracking-widest px-4">PORTFOLIO SELECTIONS</div>
+            </div>
+            <div className="flex-grow h-px bg-gray-200"></div>
+          </div>
+        </div>
+            <h2 className="text-4xl font-serif mb-6">
               Visual Stories
             </h2>
             
             {/* Filter Tabs */}
-            <div className="flex justify-center gap-8 mb-12">
+            <div className="flex justify-center gap-8 mb-8">
               <button 
                 onClick={() => setActiveTab('landscape')}
                 className={`font-serif text-lg pb-2 border-b-2 transition-colors duration-300 ${
@@ -336,8 +344,28 @@ export default function HomePage() {
         </div>
       </div>
       
+      {/* Visual separator between gallery and blog section */}
+      <div className="py-12 bg-gray-100">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="flex items-center justify-center">
+            <div className="flex-grow h-px bg-gray-200"></div>
+            <div className="mx-6">
+              <div className="font-serif text-gray-400 text-sm tracking-widest px-4">STORIES</div>
+            </div>
+            <div className="flex-grow h-px bg-gray-200"></div>
+          </div>
+        </div>
+        
+        {/* Centered Latest Blog heading */}
+        <div className="text-center mt-2">
+          <h2 className="text-4xl font-serif">
+            Latest Blog
+          </h2>
+        </div>
+      </div>
+      
       {/* Split Section */}
-      <div className="grid grid-cols-1 md:grid-cols-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 bg-gray-100">
         <div className="bg-black text-white p-16 md:p-24 flex flex-col justify-center">
           <span className="text-sm font-serif uppercase tracking-widest mb-6">Latest Post</span>
           <h2 className="text-3xl md:text-4xl font-serif mb-8">
@@ -368,7 +396,15 @@ export default function HomePage() {
       <div className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
-            <span className="text-sm font-serif uppercase tracking-widest mb-4 inline-block">About Me</span>
+          <div className="max-w-4xl mx-auto px-4">
+          <div className="flex items-center justify-center mb-4">
+            <div className="flex-grow h-px bg-gray-200"></div>
+            <div className="mx-6">
+              <div className="font-serif text-gray-400 text-sm tracking-widest px-4">STORIES</div>
+            </div>
+            <div className="flex-grow h-px bg-gray-200"></div>
+          </div>
+        </div>
             <h2 className="text-4xl font-serif mb-8">
               The Person Behind the Lens
             </h2>
@@ -403,10 +439,18 @@ export default function HomePage() {
       </div>
       
       {/* Instagram Teaser */}
-      <div className="py-24 px-4">
+      <div className="pb-24 px-4 bg-gray-100">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-16">
-            <span className="text-sm font-serif uppercase tracking-widest mb-4 inline-block">Follow Along</span>
+          <div className="max-w-4xl mx-auto px-4">
+          <div className="flex items-center justify-center mb-4">
+            <div className="flex-grow h-px bg-gray-200"></div>
+            <div className="mx-6">
+              <div className="font-serif text-gray-400 text-sm tracking-widest px-4">FOLLOW ALONG</div>
+            </div>
+            <div className="flex-grow h-px bg-gray-200"></div>
+          </div>
+        </div>
             <h2 className="text-4xl font-serif mb-6">
               Join the Journey
             </h2>
@@ -418,7 +462,7 @@ export default function HomePage() {
           <div className="grid grid-cols-2 md:grid-cols-6 gap-1">
             <div className="aspect-square overflow-hidden">
               <img 
-                src="/images/bird-bug.jpg" 
+                src="/images/images_3_2/mustache-band.jpg" 
                 alt="Instagram post" 
                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 loading="lazy"
@@ -468,7 +512,7 @@ export default function HomePage() {
           
           <div className="mt-12">
             <Link 
-              href="/instagram" 
+              href="https://www.instagram.com/j.herrera_photo/" 
               className="inline-flex items-center font-serif text-lg border-b-2 border-black pb-1 hover:border-gray-400 transition-colors duration-300"
             >
               <span>Follow on Instagram</span>
@@ -481,9 +525,17 @@ export default function HomePage() {
       </div>
       
       {/* Support My Work Section */}
-      <div className="py-24 bg-white border-t border-gray-200">
+      <div className=" pb-24 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <span className="text-sm font-serif uppercase tracking-widest mb-4 inline-block">Support My Work</span>
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="flex items-center justify-center mb-4">
+            <div className="flex-grow h-px bg-gray-200"></div>
+            <div className="mx-6">
+              <div className="font-serif text-gray-400 text-sm tracking-widest px-4">SUPPORT MY WORK</div>
+            </div>
+            <div className="flex-grow h-px bg-gray-200"></div>
+          </div>
+        </div>
           <h2 className="text-4xl font-serif mb-8">
             Appreciate What You See?
           </h2>

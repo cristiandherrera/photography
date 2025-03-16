@@ -39,46 +39,46 @@ export default function Navigation({ name = "JONATHAN SMITH" }) {
           </Link>
           
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-6 font-serif text-sm">
+          <div className="hidden md:flex items-center space-x-2 font-serif text-sm ml-auto mr-0">
             <Link 
               href="/" 
-              className={`px-2 py-1 border-b-2 border-black transition-colors`}
+              className={`px-1 py-1 border-b-2 border-black transition-colors`}
             >
               Home
             </Link>
             <Link 
               href="/gallery" 
-              className={`px-2 py-1 border-b-2 border-transparent hover:border-gray-200 transition-colors`}
+              className={`px-1 py-1 border-b-2 border-transparent hover:border-gray-200 transition-colors`}
             >
               Gallery
             </Link>
             <Link 
               href="/blog" 
-              className={`px-2 py-1 border-b-2 border-transparent hover:border-gray-200 transition-colors`}
+              className={`px-1 py-1 border-b-2 border-transparent hover:border-gray-200 transition-colors`}
             >
               Blog
             </Link>
             <Link 
               href="/contact" 
-              className={`px-2 py-1 border-b-2 border-transparent hover:border-gray-200 transition-colors`}
+              className={`px-1 py-1 border-b-2 border-transparent hover:border-gray-200 transition-colors`}
             >
               My Story
             </Link>
             <Link 
-              href="" 
-              className={`px-2 py-1 border-b-2 border-transparent hover:border-gray-200 transition-colors`}
+              href="https://www.instagram.com/j.herrera_photo/" 
+              className={`px-1 py-1 border-b-2 border-transparent hover:border-gray-200 transition-colors`}
             >
               Instagram
             </Link>
             <Link 
               href="https://buymeacoffee.com/" 
-              className={`px-2 py-1 border-b-2 border-transparent hover:border-gray-200 transition-colors`}
+              className={`px-1 py-1 border-b-2 border-transparent hover:border-gray-200 transition-colors`}
             >
               Buy me a Coffee
             </Link>
             <Link 
               href="/contact" 
-              className={`px-2 py-1 border-b-2 border-transparent hover:border-gray-200 transition-colors`}
+              className={`ml-2 px-3 py-1.5 border-2 border-black text-black hover:bg-black hover:text-white rounded-md transition-colors duration-300`}
             >
               Contact
             </Link>
