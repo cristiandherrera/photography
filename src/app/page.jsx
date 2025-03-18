@@ -393,46 +393,79 @@ export default function HomePage() {
       </div>
       
       {/* About Me Section */}
-      <div className="py-24 bg-gray-50">
+      <div className="py-24 bg-gradient-to-b from-gray-50 to-gray-100">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
-          <div className="max-w-4xl mx-auto px-4">
-          <div className="flex items-center justify-center mb-4">
-            <div className="flex-grow h-px bg-gray-200"></div>
-            <div className="mx-6">
-              <div className="font-serif text-gray-400 text-sm tracking-widest px-4">ABOUT ME</div>
+            <div className="max-w-4xl mx-auto px-4">
+              <div className="flex items-center justify-center mb-4">
+                <div className="flex-grow h-px bg-gray-200"></div>
+                <div className="mx-6">
+                  <div className="font-serif text-gray-400 text-sm tracking-widest px-4">ABOUT ME</div>
+                </div>
+                <div className="flex-grow h-px bg-gray-200"></div>
+              </div>
             </div>
-            <div className="flex-grow h-px bg-gray-200"></div>
-          </div>
-        </div>
             <h2 className="text-4xl font-serif mb-8">
               The Person Behind the Lens
             </h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="aspect-square md:aspect-auto overflow-hidden">
-              <img 
-                src="/justin.jpg" 
-                alt="Jonathan Smith - Photographer" 
-                className="w-full h-full object-cover rounded-lg shadow-lg"
-                loading="lazy"
-              />
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
+            {/* Left Column - Image with cleaner design */}
+            <div className="md:col-span-5 relative">
+              <div className="aspect-square md:aspect-auto overflow-hidden rounded-xl shadow-2xl">
+                <img 
+                  src="images/family/justinkatie.jpg" 
+                  alt="Justin Herrera - Photographer" 
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
             </div>
             
-            <div className="flex flex-col justify-center">
-              <p className="font-serif text-lg mb-6 text-gray-700">
-                I'm Justin Herrera, a photographer with a passion for capturing the extraordinary in everyday moments. With over a decade of experience behind the lens, I've developed a style that blends technical precision with artistic vision.
-              </p>
-              <p className="font-serif text-lg mb-8 text-gray-700">
-                Whether I'm shooting landscapes, portraits, or street photography, I strive to tell authentic stories through my images. My work has been featured in various publications and exhibitions across the country.
-              </p>
-              <Link 
-                href="/about" 
-                className="self-start inline-block px-10 py-3 border border-black font-serif text-lg hover:bg-black hover:text-white transition-colors duration-300"
-              >
-                Learn More About Me
-              </Link>
+            {/* Right Column - Bio content */}
+            <div className="md:col-span-7 flex flex-col justify-center md:pl-8">
+              <div className="bg-white p-8 rounded-xl relative">
+                <span className="absolute top-0 left-0 transform -translate-x-1/4 -translate-y-1/4 text-8xl text-gray-100 font-serif">"</span>
+                <p className="font-serif text-lg mb-6 text-gray-700 relative z-10">
+                  I'm Justin Herrera, a photographer with a passion for capturing the extraordinary in everyday moments. With over a decade of experience behind the lens, I've developed a style that blends technical precision with artistic vision.
+                </p>
+                <p className="font-serif text-lg mb-8 text-gray-700 relative z-10">
+                  Whether I'm shooting landscapes, portraits, or street photography, I strive to tell authentic stories through my images. My work has been featured in various publications and exhibitions across the country.
+                </p>
+                
+                {/* Stats and achievements */}
+                <div className="grid grid-cols-3 gap-4 mb-6">
+                  <div className="text-center">
+                    <p className="text-3xl font-serif font-bold text-gray-800">10+</p>
+                    <p className="text-sm text-gray-600 mt-1">Years Experience</p>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-3xl font-serif font-bold text-gray-800">250+</p>
+                    <p className="text-sm text-gray-600 mt-1">Photo Sessions</p>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-3xl font-serif font-bold text-gray-800">15+</p>
+                    <p className="text-sm text-gray-600 mt-1">Exhibitions</p>
+                  </div>
+                </div>
+                
+                {/* Equipment list/interests - Moved inside the card - Fixed bubble appearance */}
+                <div className="flex flex-wrap gap-2 justify-center mb-8">
+                  <span className="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm">Nikon Z</span>
+                  <span className="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm">Canon EOS</span>
+                  <span className="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm">Street Photography</span>
+                  <span className="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm">Landscapes</span>
+                  <span className="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm">Portraits</span>
+                </div>
+                
+                <Link 
+                  href="/about" 
+                  className="self-start inline-block px-10 py-3 bg-white border border-black font-serif text-lg hover:bg-black hover:text-white transition-colors duration-300 shadow-md"
+                >
+                  Learn More About Me
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -442,15 +475,16 @@ export default function HomePage() {
       <div className="pb-24 pt-12 px-4 bg-gray-100">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-16">
-          <div className="max-w-4xl mx-auto px-4">
-          <div className="flex items-center justify-center mb-4">
-            <div className="flex-grow h-px bg-gray-200"></div>
-            <div className="mx-6">
-              <div className="font-serif text-gray-400 text-sm tracking-widest px-4">FOLLOW ALONG</div>
+            <div className="max-w-4xl mx-auto px-4">
+              <div className="flex items-center justify-center mb-4">
+                <div className="flex-grow h-px bg-gray-200"></div>
+                <div className="mx-6">
+                  <div className="font-serif text-gray-400 text-sm tracking-widest px-4">FOLLOW ALONG</div>
+                </div>
+                <div className="flex-grow h-px bg-gray-200"></div>
+              </div>
             </div>
-            <div className="flex-grow h-px bg-gray-200"></div>
-          </div>
-        </div>
+            
             <h2 className="text-4xl font-serif mb-6">
               Join the Journey
             </h2>
@@ -459,54 +493,305 @@ export default function HomePage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-6 gap-1">
-            <div className="aspect-square overflow-hidden">
-              <img 
-                src="/images/images_3_2/mustache-band.jpg" 
-                alt="Instagram post" 
-                className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                loading="lazy"
-              />
+          {/* Instagram-styled posts carousel */}
+          <div className="relative px-10 py-4 overflow-hidden">
+            {/* Left Carousel Control */}
+            <button className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white p-2 rounded-full text-gray-800 shadow-md hover:bg-gray-50 transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            
+            {/* Carousel Track */}
+            <div className="flex -mx-24 md:-mx-16 space-x-4 overflow-visible">
+              {/* Instagram Post 1 - Partially visible */}
+              <div className="w-1/5 min-w-[280px] opacity-60 transform scale-95 transition-all">
+                <div className="bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200 text-black">
+                  {/* Post Header */}
+                  <div className="flex items-center p-3">
+                    <div className="w-8 h-8 rounded-full overflow-hidden mr-3">
+                      <img 
+                        src="/justin.jpg" 
+                        alt="Profile" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="text-left">
+                      <p className="font-medium text-sm">j.herrera_photo</p>
+                      <p className="text-xs text-gray-500">City Views</p>
+                    </div>
+                  </div>
+                  
+                  {/* Post Image */}
+                  <div className="aspect-square overflow-hidden">
+                    <img 
+                      src="/images/images_3_2/pianoman.jpg" 
+                      alt="Instagram post" 
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  
+                  {/* Interaction Buttons */}
+                  <div className="p-3">
+                    <div className="flex items-center justify-between mb-2">
+                      <div className="flex space-x-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="hover:text-red-500 cursor-pointer transition-colors">
+                          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="hover:text-blue-500 cursor-pointer transition-colors">
+                          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                        </svg>
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="hover:text-gray-700 cursor-pointer transition-colors">
+                        <path d="M17.5 20h.5c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-10c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h.5"></path>
+                        <path d="M7 10h10"></path>
+                        <path d="M7 14h10"></path>
+                        <path d="M9 18h6"></path>
+                      </svg>
+                    </div>
+                    <p className="text-sm font-medium text-left">176 likes</p>
+                    <div className="text-left mt-1">
+                      <span className="text-sm"><span className="font-medium">j.herrera_photo</span> City nights have their own rhythm #cityphotography</span>
+                    </div>
+                    <p className="text-xs text-gray-500 text-left mt-1">3 DAYS AGO</p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Instagram Post 2 - Fully visible */}
+              <div className="w-1/5 min-w-[280px] transform transition-all">
+                <div className="bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200 text-black">
+                  {/* Post Header */}
+                  <div className="flex items-center p-3">
+                    <div className="w-8 h-8 rounded-full overflow-hidden mr-3">
+                      <img 
+                        src="/justin.jpg" 
+                        alt="Profile" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="text-left">
+                      <p className="font-medium text-sm">j.herrera_photo</p>
+                      <p className="text-xs text-gray-500">Downtown</p>
+                    </div>
+                  </div>
+                  
+                  {/* Post Image */}
+                  <div className="aspect-square overflow-hidden">
+                    <img 
+                      src="/images/images_3_2/mustache-band.jpg" 
+                      alt="Instagram post" 
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  
+                  {/* Interaction Buttons */}
+                  <div className="p-3">
+                    <div className="flex items-center justify-between mb-2">
+                      <div className="flex space-x-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="hover:text-red-500 cursor-pointer transition-colors">
+                          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="hover:text-blue-500 cursor-pointer transition-colors">
+                          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                        </svg>
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="hover:text-gray-700 cursor-pointer transition-colors">
+                        <path d="M17.5 20h.5c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-10c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h.5"></path>
+                        <path d="M7 10h10"></path>
+                        <path d="M7 14h10"></path>
+                        <path d="M9 18h6"></path>
+                      </svg>
+                    </div>
+                    <p className="text-sm font-medium text-left">256 likes</p>
+                    <div className="text-left mt-1">
+                      <span className="text-sm"><span className="font-medium">j.herrera_photo</span> Live music captures moments that stay with us forever... #livemusic #photography</span>
+                    </div>
+                    <p className="text-xs text-gray-500 text-left mt-1">2 DAYS AGO</p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Instagram Post 3 - Fully visible */}
+              <div className="w-1/5 min-w-[280px] transform transition-all">
+                <div className="bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200 text-black">
+                  {/* Post Header */}
+                  <div className="flex items-center p-3">
+                    <div className="w-8 h-8 rounded-full overflow-hidden mr-3">
+                      <img 
+                        src="/justin.jpg" 
+                        alt="Profile" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="text-left">
+                      <p className="font-medium text-sm">j.herrera_photo</p>
+                      <p className="text-xs text-gray-500">Art District</p>
+                    </div>
+                  </div>
+                  
+                  {/* Post Image */}
+                  <div className="aspect-square overflow-hidden">
+                    <img 
+                      src="/images/Snapinst.app_467524756_413022545081645_6074294499607920813_n_1080.jpg" 
+                      alt="Instagram post" 
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  
+                  {/* Interaction Buttons */}
+                  <div className="p-3">
+                    <div className="flex items-center justify-between mb-2">
+                      <div className="flex space-x-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="hover:text-red-500 cursor-pointer transition-colors">
+                          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="hover:text-blue-500 cursor-pointer transition-colors">
+                          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                        </svg>
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="hover:text-gray-700 cursor-pointer transition-colors">
+                        <path d="M17.5 20h.5c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-10c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h.5"></path>
+                        <path d="M7 10h10"></path>
+                        <path d="M7 14h10"></path>
+                        <path d="M9 18h6"></path>
+                      </svg>
+                    </div>
+                    <p className="text-sm font-medium text-left">312 likes</p>
+                    <div className="text-left mt-1">
+                      <span className="text-sm"><span className="font-medium">j.herrera_photo</span> Urban textures and stories hidden in plain sight #urbanphotography #streetscene</span>
+                    </div>
+                    <p className="text-xs text-gray-500 text-left mt-1">5 DAYS AGO</p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Instagram Post 4 - Fully visible */}
+              <div className="w-1/5 min-w-[280px] transform transition-all">
+                <div className="bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200 text-black">
+                  {/* Post Header */}
+                  <div className="flex items-center p-3">
+                    <div className="w-8 h-8 rounded-full overflow-hidden mr-3">
+                      <img 
+                        src="/justin.jpg" 
+                        alt="Profile" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="text-left">
+                      <p className="font-medium text-sm">j.herrera_photo</p>
+                      <p className="text-xs text-gray-500">Natural Wonders</p>
+                    </div>
+                  </div>
+                  
+                  {/* Post Image */}
+                  <div className="aspect-square overflow-hidden">
+                    <img 
+                      src="/images/cave.jpg" 
+                      alt="Instagram post" 
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  
+                  {/* Interaction Buttons */}
+                  <div className="p-3">
+                    <div className="flex items-center justify-between mb-2">
+                      <div className="flex space-x-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="hover:text-red-500 cursor-pointer transition-colors">
+                          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="hover:text-blue-500 cursor-pointer transition-colors">
+                          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                        </svg>
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="hover:text-gray-700 cursor-pointer transition-colors">
+                        <path d="M17.5 20h.5c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-10c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h.5"></path>
+                        <path d="M7 10h10"></path>
+                        <path d="M7 14h10"></path>
+                        <path d="M9 18h6"></path>
+                      </svg>
+                    </div>
+                    <p className="text-sm font-medium text-left">428 likes</p>
+                    <div className="text-left mt-1">
+                      <span className="text-sm"><span className="font-medium">j.herrera_photo</span> Nature's cathedral. The light filtering through this cave was absolutely magical #naturephotography #cave</span>
+                    </div>
+                    <p className="text-xs text-gray-500 text-left mt-1">1 WEEK AGO</p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Instagram Post 5 - Partially visible */}
+              <div className="w-1/5 min-w-[280px] opacity-60 transform scale-95 transition-all">
+                <div className="bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200 text-black">
+                  {/* Post Header */}
+                  <div className="flex items-center p-3">
+                    <div className="w-8 h-8 rounded-full overflow-hidden mr-3">
+                      <img 
+                        src="/justin.jpg" 
+                        alt="Profile" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="text-left">
+                      <p className="font-medium text-sm">j.herrera_photo</p>
+                      <p className="text-xs text-gray-500">Street Life</p>
+                    </div>
+                  </div>
+                  
+                  {/* Post Image */}
+                  <div className="aspect-square overflow-hidden">
+                    <img 
+                      src="/images/images_3_2/skateboard.jpg" 
+                      alt="Instagram post" 
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  
+                  {/* Interaction Buttons */}
+                  <div className="p-3">
+                    <div className="flex items-center justify-between mb-2">
+                      <div className="flex space-x-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="hover:text-red-500 cursor-pointer transition-colors">
+                          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="hover:text-blue-500 cursor-pointer transition-colors">
+                          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                        </svg>
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="hover:text-gray-700 cursor-pointer transition-colors">
+                        <path d="M17.5 20h.5c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-10c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h.5"></path>
+                        <path d="M7 10h10"></path>
+                        <path d="M7 14h10"></path>
+                        <path d="M9 18h6"></path>
+                      </svg>
+                    </div>
+                    <p className="text-sm font-medium text-left">203 likes</p>
+                    <div className="text-left mt-1">
+                      <span className="text-sm"><span className="font-medium">j.herrera_photo</span> Urban culture in motion #skateboarding #streetlife</span>
+                    </div>
+                    <p className="text-xs text-gray-500 text-left mt-1">1 WEEK AGO</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="aspect-square overflow-hidden">
-              <img 
-                src="/images/Snapinst.app_467524756_413022545081645_6074294499607920813_n_1080.jpg" 
-                alt="Instagram post" 
-                className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                loading="lazy"
-              />
-            </div>
-            <div className="aspect-square overflow-hidden">
-              <img 
-                src="/images/cave.jpg" 
-                alt="Instagram post" 
-                className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                loading="lazy"
-              />
-            </div>
-            <div className="aspect-square overflow-hidden">
-              <img 
-                src="/images/images_3_2/skateboard.jpg" 
-                alt="Instagram post" 
-                className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                loading="lazy"
-              />
-            </div>
-            <div className="aspect-square overflow-hidden">
-              <img 
-                src="/images/Snapinst.app_429100675_774643520694229_2004101476639556110_n_1080.jpg" 
-                alt="Instagram post" 
-                className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                loading="lazy"
-              />
-            </div>
-            <div className="aspect-square overflow-hidden">
-              <img 
-                src="/images/Snapinst.app_428717247_794583702566290_8075941958677745671_n_1080.jpg" 
-                alt="Instagram post" 
-                className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                loading="lazy"
-              />
+            
+            {/* Right Carousel Control */}
+            <button className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white p-2 rounded-full text-gray-800 shadow-md hover:bg-gray-50 transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+            
+            {/* Carousel Indicators */}
+            <div className="flex justify-center mt-6 space-x-2">
+              <div className="w-2 h-2 rounded-full bg-gray-800"></div>
+              <div className="w-2 h-2 rounded-full bg-gray-300"></div>
+              <div className="w-2 h-2 rounded-full bg-gray-300"></div>
             </div>
           </div>
           
@@ -514,8 +799,10 @@ export default function HomePage() {
             <Link 
               href="https://www.instagram.com/j.herrera_photo/" 
               className="inline-flex items-center font-serif text-lg border-b-2 border-black pb-1 hover:border-gray-400 transition-colors duration-300"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <span>Follow on Instagram</span>
+              <span>See More on Instagram</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2">
                 <path d="M7 17l9.2-9.2M17 17V7H7"/>
               </svg>

@@ -102,7 +102,7 @@ export default function Footer() {
               <p className="font-serif text-sm text-gray-400">
                 © {new Date().getFullYear()} Justin Herrera. All rights reserved. 
               </p>
-              <div className="font-serif text-sm text-white-400">Site created and designed by his dear brother, <a href="https://www.cristianherrera.dev" className="pt-8 hover:text-gray-300 transition-colors">Cristian Herrera</a></div>
+              <div className="font-serif text-sm text-white-400">Site created and designed by <a href="https://www.cristianherrera.dev" className="pt-8 hover:text-gray-300 transition-colors">Cristian Herrera</a></div>
             </div>
             <nav>
               <ul className="flex gap-8 font-serif text-sm">

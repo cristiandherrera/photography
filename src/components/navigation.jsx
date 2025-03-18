@@ -34,7 +34,7 @@ export default function Navigation({ name = "JONATHAN SMITH" }) {
             href="/" 
             className="font-serif flex items-baseline"
           >
-            <span className="text-xl md:text-2xl tracking-widest">JUSTIN HERRERA</span>
+            <span className="text-xl md:text-2xl ">JUSTIN HERRERA</span>
             <span className="ml-2 text-sm tracking-wide"> | Foothill Photography</span>
           </Link>
           
@@ -59,7 +59,7 @@ export default function Navigation({ name = "JONATHAN SMITH" }) {
               Blog
             </Link>
             <Link 
-              href="/contact" 
+              href="/about" 
               className={`px-1 py-1 border-b-2 border-transparent hover:border-gray-200 transition-colors`}
             >
               My Story
